@@ -1,0 +1,12 @@
+.left-panel{
+	color: white !important;
+}
+.right-panel a{
+	color: white !important;
+	padding-right: 10px;
+}
+.menu-heading{
+	background-color: rgba(82,64,120,0.9) !important;
+	color: white !important;
+	text-align: center;
+}

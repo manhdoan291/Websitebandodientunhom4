@@ -1,0 +1,1 @@
+<h1>xin chào <?php echo $username; ?></h1>
