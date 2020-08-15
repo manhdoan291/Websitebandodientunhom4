@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+	<title>Website Thương Mại Điện Tử</title>
 	<?php $this->load->view('site/head'); ?>
 </head>
 <body>
