@@ -13,7 +13,7 @@ class MY_Model extends CI_Model{
 		$news = $qr->first_row("array");
 		return $news;
 	}
-	public function create($news){
+	public function add($news){
 		
 		if($this->db->insert($this->table, $news))
 			return true;

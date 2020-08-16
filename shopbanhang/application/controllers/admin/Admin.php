@@ -14,8 +14,8 @@
 		}
 		public function index(){
 			$data = array(
-				"content" => "admin/home");
-				// "username" => $this->session->userdata("username"));
+				"content" => "admin/home",
+				"username" => $this->session->userdata("username"));
 			$this->load->view("admin/layoutad",$data);
 		}
 	}

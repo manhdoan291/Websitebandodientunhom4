@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>This is a WebPage using Bootstrap 4</title>
+	<title>trang quản lý website</title>
 	<!-- Import Boostrap css, js, font awesome here -->
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">  --> 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">     
@@ -43,7 +43,7 @@
 					    <a class="nav-link" href="#">Quản lý danh mục sản phẩm</a>
 					</li>
 				    <li class="nav-item">
-				    	<a class="nav-link" href="#">quản lý thành viên</a>
+				    	<a class="nav-link" href="<?php echo base_url("index.php/admin/userad/index")?>">quản lý thành viên</a>
 				    </li>
 				    <li class="nav-item">
 				    	<a class="nav-link disabled" href="#">quản lý đơn hàng</a>
@@ -51,6 +51,7 @@
 				</ul>
 			</div>
 		</div>
+		<div class="col-sm-8"><?php $this->load->view($content);?> </div>
 	</div>		
 </div>
 </body>
