@@ -40,7 +40,7 @@
 				    	<a class="nav-link active" href="#">Quản lý sản phẩm</a>
 				  	</li>
 				 	<li class="nav-item">
-					    <a class="nav-link" href="#">Quản lý danh mục sản phẩm</a>
+					    <a class="nav-link" href="<?php echo base_url("index.php/admin/catalog/index")?>">Quản lý danh mục sản phẩm</a>
 					</li>
 				    <li class="nav-item">
 				    	<a class="nav-link" href="<?php echo base_url("index.php/admin/userad/index")?>">quản lý thành viên</a>

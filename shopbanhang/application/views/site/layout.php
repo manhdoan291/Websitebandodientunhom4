@@ -14,7 +14,7 @@
 	<div class="container">
 		<div class="row padding">
 			<div class="col-sm-4">
-				<?php $this->load->view('site/left'); ?>
+				<?php $this->load->view($content);?>
 			</div>
 			<div class="col-sm-8">
 				<?php $this->load->view('site/right'); ?>

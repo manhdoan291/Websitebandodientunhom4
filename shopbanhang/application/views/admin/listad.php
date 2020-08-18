@@ -6,11 +6,11 @@
 	<div class="card">
 		<table border="1">
 			<?php foreach($user_list as $user): ?>
-				<tr class="menu-heading">
+				<!-- <tr class="menu-heading">
 					<td>tên tài khoản</td>
 					<td>chỉnh sửa</td>
 					<td>xóa</td>
-				</tr>
+				</tr> -->
 				<tr style="text-align: center;">
 					<td>
 						<a href="<?php echo base_url("index.php/admin/userad/edit/".$user["id"]) ?>">

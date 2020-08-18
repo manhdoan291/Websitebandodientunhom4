@@ -1,36 +1,24 @@
-<h6>DANH MỤC SẢN PHẨM</h6>
+<div>
+	<h6>DANH MỤC SẢN PHẨM</h6>
+</div>
 <div class="card">
 	<ul class="nav flex-column">
+		<?php foreach($cata_list as $cata): ?>
 		<li class="nav-item">
-			<a class="nav-link active" href="#">Điện thoại</a>
+			<a class="nav-link active" href="#"><?php echo $cata['name']; ?></a>
+			<?php if(!empty($cata->subs)):?>
+			<ul>
+				<?php foreach($cata->subs as $subs): ?>
+				<li class="nav-item">
+					<a class="nav-link" href="#"><?php echo $subs['name']; ?></a>
+				</li>
+				<?php endforeach ?>
+			</ul>
+			<?php endif ?>
 		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#">Máy tính bảng</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#">Phụ kiện công nghệ</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link disabled" href="#">Loa</a>
-		</li>
+		<?php endforeach ?>
 	</ul>
 </div>
-<h6>THƯƠNG HIỆU SẢN PHẨM</h6>
-<div class="card">
-	<ul class="nav flex-column">
-		<li class="nav-item">
-			<a class="nav-link active" href="#">Iphone</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#">Samsung</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#">LG</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link disabled" href="#">Sony</a>
-		</li>
-	</ul>
-</div>
+
 			
 		

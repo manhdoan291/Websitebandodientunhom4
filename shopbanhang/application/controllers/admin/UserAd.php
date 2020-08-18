@@ -23,7 +23,7 @@
 			$user["username"] = (isset($_POST["username"]))?$_POST["username"]: "";
 		$user["password"] = (isset($_POST["password"]))?$_POST["password"]: "";
 		$user["is_admin"] = (isset($_POST["is_admin"])? 1:0);
-		$user["news_mana"] = (isset($_POST["news_mana"])? 1:0);
+		$user["sp_mana"] = (isset($_POST["sp_mana"])? 1:0);
 		$user["user_mana"] = (isset($_POST["user_mana"])? 1:0);
 		if($user["username"]!=""){
 			$this->load->model("admin_model");
