@@ -12,31 +12,23 @@
                         
                         <div class="carousel-inner">
                             <div class="item active">
-                               
                                 <div class="col-sm-12">
                                     <img alt="{{$slide->slider_desc}}" src="<?php echo public_url()?>site/images/slide3.jpg" height="200" width="100%" class="img img-responsive">
-                                   
                                 </div>
                             </div>
                             <div class="item">
-                               
                                 <div class="col-sm-12">
                                     <img alt="{{$slide->slider_desc}}" src="<?php echo public_url()?>site/images/slide4.jpg" height="200" width="100%" class="img img-responsive">
-                                   
                                 </div>
                             </div>
                             <div class="item">
-                               
                                 <div class="col-sm-12">
                                     <img alt="{{$slide->slider_desc}}" src="<?php echo public_url()?>site/images/slide5.jpg" height="200" width="100%" class="img img-responsive">
-                                   
                                 </div>
                             </div>
                             <div class="item">
-                               
                                 <div class="col-sm-12">
                                     <img alt="{{$slide->slider_desc}}" src="<?php echo public_url()?>site/images/slide6.jpg" height="200" width="100%" class="img img-responsive">
-                                   
                                 </div>
                             </div>
                             

@@ -6,10 +6,13 @@
 	<link href="<?php echo public_url()?>/site/css/css.css" rel="stylesheet">
 </head>
 <body>
-	<?php $this->load->view('site/header'); ?>
-	<main class="login-form">
-    <div class="cotainer">
-        <div class="row justify-content-center">
+	<div class="header">
+		<?php $this->load->view('site/header'); ?>
+	</div>
+	<div class="slide">
+		<?php $this->load->view('site/slide'); ?>
+	</div>
+        <!-- <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">ĐĂNG NHẬP</div>
@@ -36,9 +39,44 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-</main>
+    	</div> -->
+    	<section id="forms" style=" margin-bottom: 185px;"><!--form-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-1">
+					<div class="login-form"><!--login form-->
+						<h2>Đăng nhập tài khoản</h2>
+						<form action="<?php echo base_url("index.php/admin/login/loginn");?>" method="POST">
+							<fieldset>
+							<input type="text" name="username"/>
+							<input type="Password" name="password">
+							<button type="submit" class="btn btn-default">đăng nhập</button>
+							</fieldset>
+						</form>
+					</div><!--/login form-->
+				</div>
+				<div class="col-sm-1">
+					<h2 class="or">Hoặc</h2>
+				</div>
+				<div class="col-sm-4">
+					<div class="signup-form"><!--sign up form-->
+						<h2>Đăng ký</h2>
+						<form action="{{URL::to('/add-customer')}}" method="POST">
+							<fieldset>
+							<input type="text" name="customer_name" placeholder="Họ và tên"/>
+							<input type="email" name="customer_email" placeholder="Địa chỉ email"/>
+							<input type="password" name="customer_password" placeholder="Mật khẩu"/>
+							<input type="text" name="customer_phone" placeholder="Phone"/>
+							<button type="submit" class="btn btn-default">Đăng ký</button>
+							</fieldset>
+						</form>
+					</div><!--/sign up form-->
+				</div>
+			</div>
+		</div>
+	</section><!--/form-->
 <?php $this->load->view('site/footer'); ?>
+<?php $this->load->view('site/js'); ?>
+
 </body>
 </html>

@@ -6,12 +6,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			 parent:: __construct();
 			 $this->load->model('catalog_model');
 		}
-		public function index(){
-			$data = array(
-			"cata_list" => $this->catalog_model->getAll(),
-			"content"=>"catalog/index");
-		return $this->load->view("admin/layoutad",$data);
-		}
+		// public function index(){
+		// 	$data = array(
+		// 	"cata_list" => $this->catalog_model->getAll(),
+		// 	"content"=>"catalog/index");
+		// return $this->load->view("admin/layoutad",$data);
+		// }
 		public function insert()
 		{
 			//echo "add user";
@@ -67,5 +67,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$this->catalog_model->delete($id);
 			}
 			redirect ("admin/userad/index");
+		}
+		public function index($p =1)
+		{
+			$cata_list = $this->catalog_model->getALL(5,5*($p-1));
+
+			$data = array(
+				"content" => "catalog/index",
+				"cata_list" =>$cata_list,
+				"total" => $this->catalog_model->countAll()
+			);
+
+			$this->load->view("admin/layoutad",$data);
 		}
 	}

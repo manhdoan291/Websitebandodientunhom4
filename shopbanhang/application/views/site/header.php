@@ -61,7 +61,7 @@
                             	<li><a href="#"><i class="fa fa-star"></i> Yêu thích</a></li>
                             	<li><a href="#"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
                             	<li><a href="#"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
-                            	<li><a href="<?php echo public_url()?>admin/home"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+                            	<li><a href="<?php echo base_url("index.php/admin/login");?>"><i class="fa fa-lock"></i> Đăng nhập</a></li>
                 			</ul>
                         </div>
                     </div>
@@ -82,25 +82,25 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="{{URL::to('/trang-chu')}}" class="active">Trang chủ</a></li>
+                                <li><a href="<?php echo base_url("index.php/home/index");?>" class="active">Trang chủ</a></li>
                                 <li class="dropdown"><a href="#">Sản phẩm<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         
-                                        <!-- @foreach($category as $key => $danhmuc)
-                                        <li><a href="{{URL::to('/danh-muc/'.$danhmuc->slug_category_product)}}">{{$danhmuc->category_name}}</a></li>
-                                        @endforeach -->
+                                        <?php foreach($cata_list as $cata): ?>
                                         <li class="nav-item">
-                                            <a class="nav-link active" href="#">Điện thoại</a>
+                                            <a class="nav-link active" href="#"><?php echo $cata['name']; ?></a>
+                                            <?php if(!empty($cata->subs)):?>
+                                            <ul>
+                                                <?php foreach($cata->subs as $subs): ?>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#"><?php echo $subs['name']; ?></a>
+                                                </li>
+                                                <?php endforeach ?>
+                                            </ul>
+                                            <?php endif ?>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Máy tính bảng</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Phụ kiện công nghệ</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link disabled" href="#">Loa</a>
-                                        </li>
+                                        <?php endforeach ?>
+                                        
                                     </ul>
                                 </li> 
                                 <li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
