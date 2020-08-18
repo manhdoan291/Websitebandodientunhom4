@@ -17,14 +17,14 @@
 				<?php $this->load->view($content);?>
 			</div>
 			<div class="col-sm-8">
-				<?php $this->load->view('site/right'); ?>
+				<?php $this->load->view($list); ?>
 			</div>
 			</div>
 		</div>
 	</div>
 	<div class="footer">
 		<?php $this->load->view('site/footer'); ?>
-		<?php $this->load->view('site/js'); ?>
+			</div>
 	</div>
 </body>
 </html>

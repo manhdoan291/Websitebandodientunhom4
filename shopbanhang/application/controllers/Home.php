@@ -5,7 +5,9 @@ class Home extends CI_controller{
 		// $this ->load->helper('url');
 		$data = array(
 			"content" => "site/left",
-			"cata_list" => $this->Catalog_model->getAll()
+			"list" => "site/right",
+			"prod_list" => $this->product_model->getAll(),
+			"cata_list" => $this->catalog_model->getAll()
 		);
 		$data['temp'] = 'site/home/index';
 		$this->load->view("site/layout",$data);
