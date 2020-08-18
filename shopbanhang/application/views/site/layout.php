@@ -24,7 +24,7 @@
 	</div>
 	<div class="footer">
 		<?php $this->load->view('site/footer'); ?>
-			</div>
+		<?php $this->load->view('site/js'); ?>
 	</div>
 </body>
 </html>
