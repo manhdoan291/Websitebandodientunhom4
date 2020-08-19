@@ -1,34 +1,128 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top"> <!-- dính trên đỉnh -->
-	<div class="container-fluid"> <!-- chiếm toàn bộ chiều ngang -->
-		<a class="navbar-branch" href="#"> <!-- chứa ảnh, logo -->
-			<img src="<?php echo public_url()?>site/images/banner1.jpg" height="50">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" 
-			data-target="#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive"> <!-- nối với button qua id -->
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link active" href="#">Trang chủ</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Sản phẩm</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Tin tức</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Giỏ hàng</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Liên hệ</a>
-				</li>
-			</ul>
-		</div>
-		<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	        <button class="btn btn-primary btn-lg" type="submit">search</button>
-	    </form>
-	</div>
-</nav>
+<header id="header"><!--header-->
+        <div class="header_top"><!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <divclass="contactinfo">
+                            <ul class="nav nav-pills">
+                               <li><a href="#"><i class="fa fa-phone"></i> 0865.878.134</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> Shopbanhang.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header_top-->
+        <div class="header-middle"><!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a href="index.html"><img src="{{('public/frontend/images/home/logo.png')}}" alt="" /></a>
+                        </div>
+                        <!-- <div class="btn-group pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                    USA
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Canada</a></li>
+                                    <li><a href="#">UK</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                    DOLLAR
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Canadian Dollar</a></li>
+                                    <li><a href="#">Pound</a></li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav">
+                            	<li><a href="#"><i class="fa fa-star"></i> Yêu thích</a></li>
+                            	<li><a href="#"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+                            	<li><a href="#"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                            	<li><a href="<?php echo base_url("index.php/admin/login");?>"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+                			</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-middle-->
+        <div class="header-bottom"><!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a href="<?php echo base_url("index.php/home/index");?>" class="active">Trang chủ</a></li>
+                                <li class="dropdown"><a href="#">Sản phẩm<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        
+                                        <?php foreach($cata_list as $cata): ?>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#"><?php echo $cata['name']; ?></a>
+                                            <?php if(!empty($cata->subs)):?>
+                                            <ul>
+                                                <?php foreach($cata->subs as $subs): ?>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#"><?php echo $subs['name']; ?></a>
+                                                </li>
+                                                <?php endforeach ?>
+                                            </ul>
+                                            <?php endif ?>
+                                        </li>
+                                        <?php endforeach ?>
+                                        
+                                    </ul>
+                                </li> 
+                                <li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
+                                </li> 
+                                <li><a href="{{URL::to('/gio-hang')}}">Giỏ hàng</a></li>
+                                <li><a href="{{URL::to('/lien-he')}}">Liên hệ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <form action="{{URL::to('/tim-kiem')}}" method="POST">                      
+                        <div class="search_box pull-right">
+                            <input type="text" name="keywords_submit" placeholder="Tìm kiếm sản phẩm"/>
+                            <input type="submit" style="margin-top:0;color:#666" name="search_items" class="btn btn-primary btn-sm" value="Tìm kiếm">
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-bottom-->
+    </header><!--/header-->
+
+
+
+  

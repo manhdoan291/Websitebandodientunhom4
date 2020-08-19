@@ -39,4 +39,9 @@ class MY_Model extends CI_Model{
 		$qr = $this->db->where("id",$id);
 		return $qr->delete($this->table);
 	}
+
+	public function countAll(){
+		$this->db->select("count(id) as total");
+		return $this->db->get($this->table)->first_row('array')['total'];
+	}
 }

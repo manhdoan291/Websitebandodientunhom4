@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Home extends CI_controller{
+class mainproduct extends CI_controller{
 	public function index(){
 		// $this ->load->helper('url');
 		$data = array(
@@ -10,8 +10,8 @@ class Home extends CI_controller{
 			"cata_list" => $this->catalog_model->getAll(),
 			"total"=>$this->product_model->countAll()
 		);
-		$data['temp'] = 'site/home/index';
-		$this->load->view("site/layout",$data);
+		$data['temp'] = 'mainproduct/index';
+		$this->load->view("mainproduct/layout",$data);
 		return;
 	}
 }

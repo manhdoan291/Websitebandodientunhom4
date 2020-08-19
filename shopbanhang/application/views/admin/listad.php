@@ -1,7 +1,7 @@
 <div class="col-sm-8">
 	<div class="menu-heading">Danh sách tài khoản</div>
 	<div class="button">
-		<a href="<?php echo base_url("index.php/admin/userad/insert") ?>"">Thêm mới</a>
+		<a href="<?php echo base_url("index.php/admin/userad/insert") ?>">Thêm mới</a>
 	</div>
 	<div class="card">
 		<table border="1">

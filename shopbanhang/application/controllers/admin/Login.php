@@ -22,7 +22,7 @@ class Login extends MY_Controller{
 				$this->session->set_Userdata("username", $usr);
 				$this->session->set_Userdata("is_admin", $user["is_admin"]);
 				if($user["is_admin"]){
-					redirect ("admin/admin/index");
+					redirect ("productad/index");
 					
 				}redirect("product/index");
 			}

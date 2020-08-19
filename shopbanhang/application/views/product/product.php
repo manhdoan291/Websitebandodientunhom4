@@ -1,38 +1,38 @@
-  <!-- <div class="col-sm-8">
-	<div class="menu-heading">Danh mục sản phẩm</div>
-	<div class="button">
-		<a href="<?php echo base_url("index.php/admin/catalog/insert") ?>">Thêm mới</a>
-	</div>
-	<div class="card">
-		<table border="1">
-			<?php foreach($cata_list as $cata): ?>
-				<tr style="text-align: center;">
-					<td>
-						<a href="<?php echo base_url("index.php/admin/userad/edit/".$cata["id"]) ?>">
-							<?php echo $cata['name']; ?>
-						</a>
-					</td>
-					<td>
-						<a href="<?php echo base_url("index.php/admin/userad/edit/".$cata["id"]) ?>">
-							<?php echo $cata['sort_oder']; ?>
-						</a>
-					</td>
-					<td>
-						<a href="<?php echo base_url("index.php/admin/catalog/edit/".$cata["id"]) ?>">sửa</a>
-					</td>
-					<td>
-						<a href="<?php echo base_url("index.php/admin/catalog/delete/".$cata["id"]) ?>">xóa</a>
-					</td>
-				</tr>
-			<?php endforeach ?>
-		</table>
-	</div>
-</div>
- -->
+<!-- <?php if(isset($prod)): ?>
+	<h1>Chỉnh sửa sản phẩm</h1>
+<?php else: ?>
+	<h1>Thêm sản phẩm mới</h1>
+<?php endif; ?>
+<form method = "post" action="<?php echo base_url("index.php/admin/productad/".(isset($prod)?"update/".$prod["id"]:"add")) ?>">
+	<table>
+		<tr>
+			<td>Tên</td>
+			<td><input type="text" name="name" value="<?php echo (isset($prod)?$prod["name"]:"") ?>"></td>
+		</tr><br>
+		<tr>
+			<td>Giá</td>
+			<td>
+				<input type="text" name="price" value="<?php echo (isset($prod)?$prod["price"]:"") ?>"></td>
+			</td>
+		</tr>
+		<tr>
+			<td>Giảm Giá</td>
+			<td>
+				<input type="text" name="discount" value="<?php echo (isset($prod)?$prod["discount"]:"") ?>"></td>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="submit" value="Thêm">
+			</td>
+		</tr>
+	</table>
+</form> -->
+
 <div class="table-agile-info">
   <div class="panel panel-default">
     <div class="panel-heading">
-      Liệt kê danh mục sản phẩm
+      aaaaaa
     </div>
     <div class="row w3-res-tb">
       <div class="col-sm-5 m-b-xs">              
@@ -62,18 +62,22 @@
         </thead>
         <tbody>
         	
-        	<?php foreach($cata_list as $cata): ?>
+        	<?php foreach($prod_list as $prod): ?>
 				<tr>
 					<td>
 						<a href="<?php echo base_url("index.php/admin/userad/edit/".$cata["id"]) ?>">
-							<?php echo $cata['name']; ?>
+							<?php echo $prod['name']; ?>
 						</a>
 					</td>
 					<td>
-						<a href="<?php echo base_url("index.php/admin/catalog/edit/".$cata["id"]) ?>">sửa</a>
+						<a href="<?php echo base_url("index.php/admin/catalog/edit/".$cata["id"]) ?>">
+							<?php echo $prod['price']; ?>
+						</a>
 					</td>
 					<td>
-						<a href="<?php echo base_url("index.php/admin/catalog/delete/".$cata["id"]) ?>">xóa</a>
+						<a href="<?php echo base_url("index.php/admin/catalog/delete/".$cata["id"]) ?>">
+							<?php echo $prod['discount']; ?>
+						</a>
 					</td>
 				</tr>
 			<?php endforeach ?>
@@ -87,7 +91,7 @@
       <div class="row">
         
         <div class="col-sm-5 text-center">
-          <small class="text-muted inline m-t-sm m-b-sm">showing 5 of <?php echo $total ?> items</small>
+          <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small>
         </div>
         <div class="col-sm-7 text-right text-center-xs">                
           <ul class="pagination pagination-sm m-t-none m-b-none">

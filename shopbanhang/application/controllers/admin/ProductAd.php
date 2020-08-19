@@ -2,12 +2,21 @@
 	defined('BASEPATH') OR exit('No direct script access allowed');
 	require_once __DIR__."/Admin.php";
 	class ProductAd extends Admin{
-		public function index(){
-			$data = array(
-			"prod_list" => $this->product_model->getAll(),
-			"content"=>"product/index");
-		return $this->load->view("admin/layoutad",$data);
+		public function __construct(){
+			 parent:: __construct();
+			 $this->load->model('Product_model');
 		}
+		public function index($p =1){
+			$prod_list = $this->Product_model->getALL(5,5*($p-1));
+
+			$data = array(
+			"content"=>"product/index",
+			"prod_list" =>$prod_list,
+			"total" => $this->Product_model->countAll()
+		);
+			$this->load->view("admin/layoutad",$data);
+		}
+
 		public function insert()
 		{
 			//echo "add user";

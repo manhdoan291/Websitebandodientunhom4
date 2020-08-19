@@ -12,4 +12,5 @@ class Catalog_model extends MY_Model
 		$cata = $qr->first_row("array");
 		return $cata;
 	}
+	
 }

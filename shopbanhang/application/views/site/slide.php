@@ -1,30 +1,48 @@
-<div id="slides" class="carousel slide" data-ride="carousel"> <!-- slide bootrap -->
-	<ul class="carousel-indicators"> <!-- vạch trắng ở dưới chuyển trang khác nhau -->
-		<li data-target="#slides" data-slide-to="0" class="active"></li>
-		<li data-target="#slides" data-slide-to="1"></li>
-		<li data-target="#slides" data-slide-to="2"></li>		
-		<li data-target="#slides" data-slide-to="3"></li>
-	</ul>
-	<div class="carousel-inner"> <!-- set ảnh cho các vạch trên -->
-		<div class="carousel-item active">
-			<img src="<?php echo public_url()?>site/images/slide 4.jpg">
-			<!-- <div class="carousel-caption">
-				<h1 class="display-2">Example</h1> 
-				<h3>Autolayout with Boostrap</h3>
-				<button type="button" class="btn btn-outline-light btn-lg">
-					VIEW TUTORIALS
-				</button>
-				<button type="button" class="btn btn-primary btn-lg">Get started</button>
-			</div> -->
-		</div>
-		<div class="carousel-item">
-			<img src="<?php echo public_url()?>site/images/slide5.jpg">
-		</div>
-		<div class="carousel-item">
-			<img src="<?php echo public_url()?>site/images/slide3.jpg">
-		</div>
-		<div class="carousel-item">
-			<img src="<?php echo public_url()?>site/images/slide6.jpg">
-		</div>
-	</div>
-</div>
+<section id="slider"><!--slider-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#slider-carousel" data-slide-to="1"></li>
+                            <li data-target="#slider-carousel" data-slide-to="2"></li>
+                            <li data-target="#slider-carousel" data-slide-to="3"></li>
+                        </ol>
+                        
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-12">
+                                    <img alt="{{$slide->slider_desc}}" src="<?php echo public_url()?>site/images/slide3.jpg" height="200" width="100%" class="img img-responsive">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-12">
+                                    <img alt="{{$slide->slider_desc}}" src="<?php echo public_url()?>site/images/slide4.jpg" height="200" width="100%" class="img img-responsive">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-12">
+                                    <img alt="{{$slide->slider_desc}}" src="<?php echo public_url()?>site/images/slide5.jpg" height="200" width="100%" class="img img-responsive">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-12">
+                                    <img alt="{{$slide->slider_desc}}" src="<?php echo public_url()?>site/images/slide6.jpg" height="200" width="100%" class="img img-responsive">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section><!--/slider-->

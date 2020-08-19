@@ -17,7 +17,7 @@
 				<?php $this->load->view($content);?>
 			</div>
 			<div class="col-sm-8">
-				<?php $this->load->view('site/right'); ?>
+				<?php $this->load->view('mainproduct/detail'); ?>
 			</div>
 			</div>
 		</div>
